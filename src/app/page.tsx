@@ -27,9 +27,9 @@ export default function Home() {
     console.log("Recounting doubles:", count);
   }, [JSON.stringify(dominoes)]);
 
-  function countDoubleNumbers(data: [number, number][]) {
+  const countDoubleNumbers = (data: [number, number][]) => {
     return data.filter(([a, b]) => a === b).length;
-  }
+  };
 
   const sortDominoes = (order: "asc" | "desc") => {
     const sorted = [...dominoes].sort((a, b) => {
